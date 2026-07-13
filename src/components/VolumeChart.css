@@ -1,0 +1,35 @@
+.volume-chart {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 16px 8px;
+}
+
+.volume-chart-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.volume-tooltip {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-bright);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+}
+
+.volume-tooltip-date {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.volume-tooltip-value {
+  font-size: 0.85rem;
+  color: var(--teal);
+  font-weight: 600;
+}

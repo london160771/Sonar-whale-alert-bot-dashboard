@@ -1,0 +1,21 @@
+.alert-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feed-state {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.feed-state--error {
+  color: var(--amber);
+  border-color: var(--amber-border);
+}
