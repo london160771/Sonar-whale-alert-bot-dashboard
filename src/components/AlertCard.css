@@ -95,6 +95,16 @@
   border-bottom-color: var(--teal);
 }
 
+.alert-share {
+  color: var(--teal);
+  border-bottom-color: var(--teal-border);
+}
+
+.alert-share:hover {
+  color: var(--text-primary);
+  border-bottom-color: var(--text-primary);
+}
+
 .alert-time {
   color: var(--text-dim);
   white-space: nowrap;

@@ -20,6 +20,27 @@
   --font-mono: 'JetBrains Mono', monospace;
 }
 
+[data-theme="light"] {
+  --bg: #f7f9fb;
+  --bg-elevated: #ffffff;
+  --bg-hover: #eef2f6;
+  --border: #e2e8ef;
+  --border-bright: #cbd5e0;
+  --text-primary: #1a2027;
+  --text-secondary: #5b6672;
+  --text-dim: #8a95a1;
+  --teal: #0d9488;
+  --teal-dim: rgba(13, 148, 136, 0.08);
+  --teal-border: rgba(13, 148, 136, 0.3);
+  --amber: #b45309;
+  --amber-dim: rgba(180, 83, 9, 0.08);
+  --amber-border: rgba(180, 83, 9, 0.35);
+}
+
+body {
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
 * {
   box-sizing: border-box;
 }

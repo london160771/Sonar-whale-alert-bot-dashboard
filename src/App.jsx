@@ -1,6 +1,7 @@
 import { useEffect, useState, useCallback, useMemo } from "react";
 import { fetchAlerts } from "./lib/api";
 import SonarPing from "./components/SonarPing";
+import ThemeToggle from "./components/ThemeToggle";
 import StatsBar from "./components/StatsBar";
 import FilterBar from "./components/FilterBar";
 import AlertFeed from "./components/AlertFeed";
@@ -85,6 +86,7 @@ function App() {
           <p className="app-subtitle">Whale alert console</p>
         </div>
         <div className="app-header-right">
+          <ThemeToggle />
           <button className="about-toggle" onClick={() => setAboutOpen((v) => !v)}>
             {aboutOpen ? "Close" : "About"}
           </button>

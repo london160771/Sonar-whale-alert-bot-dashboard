@@ -39,6 +39,16 @@ function explorerUrl(alert) {
   return `${base}/tx/${alert.txHash}`;
 }
 
+function tweetUrl(alert) {
+  const label = getWalletLabel(alert.fromAddress) || getWalletLabel(alert.toAddress);
+  const context = label ? ` involving ${label}` : "";
+  const text =
+    `🐋 Whale alert: ${formatAmount(alert.amount)} ${alert.asset} ` +
+    `(${formatUsd(alert.usdValue)}) just moved on ${alert.network}${context}.\n\n` +
+    `${explorerUrl(alert)}`;
+  return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+}
+
 export default function AlertCard({ alert }) {
   return (
     <div className={`alert-card ${alert.isTestnet ? "alert-card--testnet" : ""}`}>
@@ -61,6 +71,14 @@ export default function AlertCard({ alert }) {
         </span>
         <a href={explorerUrl(alert)} target="_blank" rel="noreferrer" className="alert-link">
           View tx
+        </a>
+        <a
+          href={tweetUrl(alert)}
+          target="_blank"
+          rel="noreferrer"
+          className="alert-link alert-share"
+        >
+          Share on X
         </a>
         <span className="alert-time">{timeAgo(alert.detectedAt)}</span>
       </div>

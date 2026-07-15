@@ -56,22 +56,22 @@ export default function VolumeChart({ alerts }) {
       <div className="volume-chart-title">Volume by day</div>
       <ResponsiveContainer width="100%" height={160}>
         <BarChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#1f2830" vertical={false} />
+          <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" vertical={false} />
           <XAxis
             dataKey="day"
-            tick={{ fill: "#8b98a5", fontSize: 11, fontFamily: "JetBrains Mono, monospace" }}
-            axisLine={{ stroke: "#1f2830" }}
+            tick={{ fill: "var(--text-secondary)", fontSize: 11, fontFamily: "JetBrains Mono, monospace" }}
+            axisLine={{ stroke: "var(--border)" }}
             tickLine={false}
           />
           <YAxis
             tickFormatter={formatUsdShort}
-            tick={{ fill: "#8b98a5", fontSize: 11, fontFamily: "JetBrains Mono, monospace" }}
+            tick={{ fill: "var(--text-secondary)", fontSize: 11, fontFamily: "JetBrains Mono, monospace" }}
             axisLine={false}
             tickLine={false}
             width={50}
           />
-          <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(45,212,191,0.06)" }} />
-          <Bar dataKey="value" fill="#2dd4bf" radius={[3, 3, 0, 0]} maxBarSize={32} />
+          <Tooltip content={<CustomTooltip />} cursor={{ fill: "var(--teal-dim)" }} />
+          <Bar dataKey="value" fill="var(--teal)" radius={[3, 3, 0, 0]} maxBarSize={32} />
         </BarChart>
       </ResponsiveContainer>
     </div>
